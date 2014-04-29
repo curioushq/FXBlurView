@@ -523,7 +523,8 @@
         //prevents pixelation on old devices
         scale = 1.0f;
     }
-    UIGraphicsBeginImageContextWithOptions(size, YES, scale);
+    
+    UIGraphicsBeginImageContextWithOptions(size, NO, scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM(context, -bounds.origin.x, -bounds.origin.y);
     
